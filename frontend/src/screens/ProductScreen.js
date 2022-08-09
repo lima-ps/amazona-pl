@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useContext, useEffect, useReducer } from 'react';
+import React, { useContext, useEffect, useReducer } from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import ListGroup from 'react-bootstrap/ListGroup'; //funciona como as "ul e li" do html

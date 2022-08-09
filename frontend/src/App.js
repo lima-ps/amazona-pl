@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 //Link = funciona como o <a/> (ancora) do HTML para linkar uma página, mas ele melhora a alternancia de pagina sem atualizar o conteudo, como se fosse uma página só
 //browserRouter = define as nossas rotas dentro de um contexto. a selação fica: browserRouter > Routes > Route
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';

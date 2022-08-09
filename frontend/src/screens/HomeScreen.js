@@ -1,5 +1,5 @@
 //useEffect utiliza um parametros: o primeiro é uma função e o segundo (opcional) pode ser um array https://www.w3schools.com/react/react_useeffect.asp.
-import { useEffect, useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import logger from 'use-reducer-logger'; //trasmite o reducer para o navegador para debugar o estado
 import Row from 'react-bootstrap/Row';
