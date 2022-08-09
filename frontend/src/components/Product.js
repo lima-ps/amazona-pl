@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card'; //cria boxes na página para cada item
 import Button from 'react-bootstrap/Button';
 import Rating from './Rating';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { Store } from '../Store';
 import axios from 'axios';
 
