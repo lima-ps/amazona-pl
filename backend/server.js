@@ -39,11 +39,11 @@ app.use('/api/orders', orderRouter);
 });*/
 
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, 'frontend/build'))); //isso garante que tudo que for colocado nesse diretorio sera lido pelo server "localhost"
+app.use(express.static(path.join(__dirname, '/frontend/build'))); //isso garante que tudo que for colocado nesse diretorio sera lido pelo server "localhost"
 
 //o (*) indica que tudo que for posto no endereço após "http://localhost:${port}/` será servido pelo html indicado"
 app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, 'frontend/build/index.html'))
+  res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
 );
 
 app.use((err, req, res, next) => {
