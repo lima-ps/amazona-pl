@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Store } from '../Store';
-import { toast } from 'react-toastify';
+//import { toast } from 'react-toastify';
 import { getError } from '../utils';
 import axios from 'axios';
 
@@ -52,12 +52,12 @@ export default function ProfileScreen() {
       });
       ctxDispatch({ type: 'USER_SIGNIN', payload: data });
       localStorage.setItem('userInfo', JSON.stringify(data));
-      toast.success('User updated successfully');
+      alert('User updated successfully');
     } catch (err) {
       dispatch({
         type: 'FETCH_FAIL',
       });
-      toast.error(getError(err));
+      alert(getError(err));
     }
   };
 

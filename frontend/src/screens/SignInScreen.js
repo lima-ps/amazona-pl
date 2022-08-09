@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/esm/Container';
 import Form from 'react-bootstrap/esm/Form';
 import { Helmet } from 'react-helmet-async';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+//import { toast } from 'react-toastify';
 import { Store } from '../Store';
 import { getError } from '../utils';
 
@@ -32,7 +32,7 @@ export default function SigninScreen() {
       localStorage.setItem('userInfo', JSON.stringify(data));
       navigate(redirect || '/');
     } catch (err) {
-      toast.error(getError(err));
+      alert(getError(err));
     }
   };
 

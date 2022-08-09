@@ -12,7 +12,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { Store } from '../Store';
 import { getError } from '../utils';
-import { toast } from 'react-toastify';
+//import { toast } from 'react-toastify';
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
 
 function reducer(state, action) {
@@ -92,7 +92,7 @@ export default function OrderScreen() {
   }
 
   function onApprove(data, actions) {
-    return actions.order.capture().then(async function (details) {
+    return actions.order.capture().then(async function(details) {
       try {
         dispatch({ type: 'PAY_REQUEST' });
         const { data } = await axios.put(
@@ -103,15 +103,15 @@ export default function OrderScreen() {
           }
         );
         dispatch({ type: 'PAY_SUCCESS', payload: data });
-        toast.success('Order is paid');
+        alert('Order is paid');
       } catch (err) {
         dispatch({ type: 'PAY_FAIL', payload: getError(err) });
-        toast.error(getError(err));
+        alert(getError(err));
       }
     });
   }
   function onError(err) {
-    toast.error(getError(err));
+    alert(getError(err));
   }
 
   useEffect(() => {
@@ -180,9 +180,9 @@ export default function OrderScreen() {
         }
       );
       dispatch({ type: 'DELIVER_SUCCESS', payload: data });
-      toast.success('Order is delivered');
+      alert('Order is delivered');
     } catch (err) {
-      toast.error(getError(err));
+      alert(getError(err));
       dispatch({ type: 'DELIVER_FAIL' });
     }
   }

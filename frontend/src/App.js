@@ -3,8 +3,8 @@ import { useContext } from 'react';
 //browserRouter = define as nossas rotas dentro de um contexto. a selação fica: browserRouter > Routes > Route
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap'; //cria links de maneira similar ao "Link" mas sendo um componente de rotas
-import { ToastContainer } from 'react-toastify'; //style para mensagens de erros
-import 'react-toastify/dist/ReactToastify.css';
+//import { ToastContainer } from 'react-toastify'; //style para mensagens de erros
+//import 'react-toastify/dist/ReactToastify.css';
 
 // elementos do bootstrap
 import Container from 'react-bootstrap/Container'; //coloca itens lado a lado in a row
@@ -40,7 +40,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <ToastContainer position="bottom-center" limit={1} />
       <div className="d-flex flex-column site-container">
         <header>
           <Navbar bg="dark" variant="dark" expand="lg">
